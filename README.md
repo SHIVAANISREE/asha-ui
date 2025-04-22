@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+  <h1>Asha AI Chatbot</h1>
+  <p>Empowering career journeys with AI, job insights, event discovery, and learning paths</p>
+</div><br><br>
 
-## Getting Started
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f7aa9fd4-f0cc-4219-adec-5e7730551b30" alt="Asha AI Banner" width="80%" />
+</p>
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🌟 About Asha AI
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Asha AI** is an intelligent, career-focused chatbot that combines **AI-powered guidance**, **live job listings**, **event updates**, and **learning resources** to help users explore and build their ideal career paths.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+This repository contains the **frontend code** for Asha AI, built with **Next.js** and **Tailwind CSS**.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🚀 Live Features
 
-To learn more about Next.js, take a look at the following resources:
+- 💬 **Chat with AI**: Get guidance, ask career questions, and explore resources.
+- 💼 **Job Listings (Remotive API)**: Discover remote jobs tailored to your interest.
+- 🎟️ **Event Listings (Ticketmaster API)**: Stay updated on tech events and career fairs.
+- 📺 **Learning Path (YouTube API)**: Curated learning videos based on your goals.
+- 🏷️ **Tag Messages**: Easily tag and retrieve key chatbot conversations.
+- 🌗 **Dark/Light Mode**: Seamless toggle between day and night modes.
+- 🔐 **Sign-In/Sign-Up**: Manual login with plans for social auth (Google, GitHub, LinkedIn).
+- 📱 **Responsive Design**: Optimized across desktop, tablet, and mobile devices.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🧠 Tech Stack
 
-## Deploy on Vercel
+| Tool        | Purpose                             |
+|-------------|--------------------------------------|
+| **Next.js** | Frontend framework                   |
+| **Tailwind CSS** | Styling                         |
+| **Framer Motion** | Animations (optional)          |
+| **Axios**   | API requests                         |
+| **MongoDB** | Chat storage (non-contextual for now)|
+| **Pinecone**| Semantic Search (Embeddings)         |
+| **models/embedding-001** | Embedding Model         |
+| **gemini-1.5-pro** | Text Generation                 |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
