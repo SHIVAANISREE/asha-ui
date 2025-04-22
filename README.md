@@ -36,8 +36,7 @@ This repository contains the **frontend code** for Asha AI, built with **Next.js
 |-------------|--------------------------------------|
 | **Next.js** | Frontend framework                   |
 | **Tailwind CSS** | Styling                         |
-| **Framer Motion** | Animations (optional)          |
-| **Axios**   | API requests                         |
+| **fetch**   | API requests                         |
 | **MongoDB** | Chat storage (non-contextual for now)|
 | **Pinecone**| Semantic Search (Embeddings)         |
 | **models/embedding-001** | Embedding Model         |
