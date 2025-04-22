@@ -30,6 +30,13 @@ This repository contains the **frontend code** for Asha AI, built with **Next.js
 
 ---
 
+## 🌐 **Live Demo**
+
+Check out the live version of **Asha AI Chatbot** here:  
+[**Asha AI**](https://asha-ui.vercel.app/)
+
+---
+
 ## 🧠 Tech Stack
 
 | Tool        | Purpose                             |
@@ -42,3 +49,4 @@ This repository contains the **frontend code** for Asha AI, built with **Next.js
 | **models/embedding-001** | Embedding Model         |
 | **gemini-1.5-pro** | Text Generation                 |
 
+---
