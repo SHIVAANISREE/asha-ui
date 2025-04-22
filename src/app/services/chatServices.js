@@ -4,7 +4,7 @@ export const sendChatMessage = async (message, message_id) => {
     try {
       console.log("message, message_id in service:", message, message_id);
       // const response = await fetch('http://localhost:8000/chat', {
-      const response = await fetch('https://asha-backend.onrender.com/chat', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/chat`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -32,7 +32,7 @@ export const tagMessage = async (messageId, tag) => {
   console.log("tag in service:", params);
 
   // const response = await fetch(`http://localhost:8000/tag-message?${params.toString()}`, {
-    const response = await fetch(`https://asha-backend.onrender.com/tag-message?${params.toString()}`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/tag-message?${params.toString()}`, {
 
     method: 'POST'
   });
@@ -49,7 +49,7 @@ export const removeTag = async (messageId) => {
   const params = new URLSearchParams({ message_id: messageId });
 
   // const response = await fetch(`http://localhost:8000/remove-tag?${params.toString()}`, {
-    const response = await fetch(`https://asha-backend.onrender.com/remove-tag?${params.toString()}`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/remove-tag?${params.toString()}`, {
     method: 'POST'
   });
 
@@ -62,7 +62,7 @@ export const removeTag = async (messageId) => {
 export const fetchTags = async () => {
   try {
     // const response = await fetch(`http://localhost:8000/tags`, {
-    const response = await fetch(`https://asha-backend.onrender.com/tags`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/tags`, {
 
       method: 'GET'
     });
@@ -83,7 +83,7 @@ export const fetchTags = async () => {
 export const fetchMessagesByTag = async (tag) => {
   try {
     // const response = await fetch(`http://localhost:8000/messages-by-tag?tag=${encodeURIComponent(tag)}`);
-    const response = await fetch(`https://asha-backend.onrender.com/messages-by-tag?tag=${encodeURIComponent(tag)}`);
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/messages-by-tag?tag=${encodeURIComponent(tag)}`);
     const data = await response.json();
     console.log("fetched data:", data);
     return data;
