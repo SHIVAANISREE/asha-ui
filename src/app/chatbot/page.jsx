@@ -72,6 +72,7 @@ export const ChatbotPage = () => {
   };
 
   const handleSend = async () => {
+    setLoading(true);
     if (!input.trim()) return;
     setMessageId(uuidv4());
     const userMessage = { 
@@ -88,6 +89,7 @@ export const ChatbotPage = () => {
     if(message_id != null && message_id != "" && message_id != undefined) {
        // Simulate sending the message and getting an AI response
       aiResponse = await sendChatMessage(userMessage.text, userMessage.id);
+      setLoading(false);
     }
    
 
@@ -367,6 +369,22 @@ export const ChatbotPage = () => {
               )}
             </div>
           ))}
+
+                 {/* Loader Message when loading */}
+    {loading && (
+      <div className="w-full flex justify-start animate-pulse">
+        <div className="max-w-lg bg-gray-800 text-white rounded-lg p-4">
+          <span className="text-indigo-400 font-medium">
+            {['Searching...', 'Almost there...', 'Got it!'][Math.floor((Date.now() / 1500) % 3)]}
+          </span>
+          <div className="mt-2 flex gap-1">
+            <span className="w-2 h-2 bg-indigo-400 rounded-full animate-bounce [animation-delay:.1s]"></span>
+            <span className="w-2 h-2 bg-indigo-400 rounded-full animate-bounce [animation-delay:.3s]"></span>
+            <span className="w-2 h-2 bg-indigo-400 rounded-full animate-bounce [animation-delay:.5s]"></span>
+          </div>
+        </div>
+      </div>
+    )}
         </div>
 
         {/* Input */}
